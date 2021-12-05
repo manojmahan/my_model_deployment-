@@ -9,7 +9,7 @@ pydot
 requests  
 sklearn 
 yfinance
-click==1.7.2
+click
 datetime
 time
 plotly
