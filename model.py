@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 
 from sklearn.preprocessing import MinMaxScaler
 
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.layers import LSTM
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import LSTM
 
 import yfinance as yf
 import plotly.graph_objs as go
