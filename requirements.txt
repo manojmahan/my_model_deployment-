@@ -127,7 +127,7 @@ urllib3==1.26.7
 wcwidth 
 webencodings==0.5.1
 Werkzeug==2.0.2
-win-inet-pton @ 
+win-inet-pton 
 wincertstore==0.2
 wrapt==1.12.1
 XlsxWriter 
