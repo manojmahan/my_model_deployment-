@@ -13,6 +13,6 @@ click
 datetime
 plotly
 keras
-guicorn==20.1.0
+gunicorn==20.1.0
 MarkupSafe==1.1.1
 Werkzeug
