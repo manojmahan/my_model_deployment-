@@ -15,4 +15,4 @@ sklearn==0.0
 tensorflow-estimator==2.7.0
 XlsxWriter  
 yfinance==0.1.67
-tensorflow==2.7.0
+
