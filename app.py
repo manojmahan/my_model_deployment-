@@ -10,8 +10,6 @@ def hello():
     if request.method=="POST":
         abcd = model.top20()
         abc = abcd.to_html()
-        final = print(abc)
-        
     return render_template("index.html",mk=final)
 
 if __name__ == '__main__':
