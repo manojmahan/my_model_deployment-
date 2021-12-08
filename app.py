@@ -1,4 +1,5 @@
 from flask import Flask ,render_template ,request
+import cv2
 import model
 
 from werkzeug.utils import secure_filename
@@ -9,8 +10,8 @@ app = Flask(__name__)
 def hello():
     if request.method=="POST":
         abcd = model.top20()
-        final = abcd.to_html()
-    return render_template("index.html",mk=final)
+        abc = abcd
+    return render_template("index.html",mk=abc.to_html())
 
 if __name__ == '__main__':
     app.run(debug=True)
