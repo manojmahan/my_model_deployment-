@@ -16,5 +16,4 @@ gunicorn==20.1.0
 MarkupSafe==1.1.1
 Werkzeug
 bs4
-pickle
 time
