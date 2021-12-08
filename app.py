@@ -1,5 +1,4 @@
 from flask import Flask ,render_template ,request
-import cv2
 import model
 
 from werkzeug.utils import secure_filename
