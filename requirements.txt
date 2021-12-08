@@ -8,5 +8,5 @@ Werkzeug==2.0.2
 yfinance==0.1.67
 gunicorn==20.0.4
 Jinja2
-itsdangerous==1.1.0
+itsdangerous
 MarkupSafe==1.1.1
