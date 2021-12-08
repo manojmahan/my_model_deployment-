@@ -1,26 +1,17 @@
 from flask import Flask ,render_template ,request
-
+import cv2
 import model
+
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
-@app.route("/")
-
+@app.route("/",methods=['GET','POST'])
 def hello():
     if request.method=="POST":
-        name = request.form["company_name"]
-        output = model.My_model(name)
-        print(output)
-    
-    return render_template("index.html")
-
-
-#@app.route("/",methods=['POST'])
-#def submit():
-    if request.method=="POST":
-        name = request.form["company name"]
-        model.My_model(name)
-    return render_template("sub.html",n=name)
+        abcd = model.top20()
+        abc = abcd
+    return render_template("index.html",mk=abc.to_html())
 
 if __name__ == '__main__':
     app.run(debug=True)
