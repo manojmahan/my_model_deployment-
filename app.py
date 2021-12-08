@@ -11,7 +11,7 @@ def hello():
     if request.method=="POST":
         abcd = model.top20()
         abc = abcd
-    return render_template("index.html",mk=abc.to_html())
+        render_template("index.html",mk=abc.to_html())
 
 if __name__ == '__main__':
     app.run(debug=True)
