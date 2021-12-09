@@ -27,7 +27,8 @@ def top20():
     a = []
     for i in tickers:
         a.append(i[:-1])
-    final_dataframe = pd.DataFrame(a[:10],columns=["company_name"])
+    a = a[:10]
+    final_dataframe = pd.DataFrame(a,columns=["company_name"])
     data = yf.download(a,'2021-12-8')['Adj Close']
     data =data.T
     data1 = data.copy()
