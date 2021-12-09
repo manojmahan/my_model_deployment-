@@ -12,6 +12,6 @@ def hello():
         abcd = model.top20()
         abc = abcd
         render_template("index.html",mk=abc.to_html())
-    return None
+    return "themk"
 if __name__ == '__main__':
     app.run(debug=True)
