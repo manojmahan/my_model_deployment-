@@ -10,8 +10,6 @@ app = Flask(__name__)
 def hello():
     if request.method=="POST":
         abcd = model.top20()
-        abc = abcd
-        render_template("index.html",mk=abc.to_html())
-    return "themk"
+    return render_template("index.html",mk=abcd.to_html())
 if __name__ == '__main__':
     app.run(debug=True)
