@@ -54,5 +54,5 @@ def top20():
     final_dataframe = pd.concat(d, axis=1, keys=headers)
     final_dataframe["%change in last 2 days"]=(final_dataframe["previous_close"]-final_dataframe["2nd_last_day"])/final_dataframe["2nd_last_day"]*100
     final_dataframe= final_dataframe.sort_values('%change in last 2 days',ascending=False)
-    final_dataframe= final_dataframe.head(20)
+    final_dataframe= final_dataframe.head()
     return final_dataframe
