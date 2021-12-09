@@ -25,9 +25,9 @@ def top20():
         return tickers
     tickers = save_sp500_tickers()
     a = []
-    for i in tickers[:10]:
+    for i in tickers:
         a.append(i[:-1])
-    final_dataframe = pd.DataFrame(a,columns=["company_name"])
+    final_dataframe = pd.DataFrame(a[:10],columns=["company_name"])
     data = yf.download(a,'2021-12-8')['Adj Close']
     data =data.T
     data1 = data.copy()
