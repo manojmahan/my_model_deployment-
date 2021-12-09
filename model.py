@@ -31,32 +31,8 @@ def top20():
     final_dataframe = pd.DataFrame(a,columns=["company_name"])
     data = yf.download(a,'2021-12-8')['Adj Close']
     data =data.T
-    data1 = data.copy()
-    c = data.columns[1].date()
-    year = c.year
-    month = c.month
-    day = c.day
-    month = str(month).zfill(2)
-    day = str(day).zfill(2)
-    y = f"{year}-{month}-{day}"
-    data["previous_close"] = data[y]
-    #data1 = yf.download(a,'2021-12-8')['Adj Close']
-    #data1 =data1.T
-    c = data1.columns[0]
-    year = c.year
-    month = c.month
-    day = c.day
-    month = str(month).zfill(2)
-    day = str(day).zfill(2)
-    x = f"{year}-{month}-{day}"
-    data1["2nd_last_day"] = data1[x]
-    d = [data1["2nd_last_day"], data["previous_close"]]
-    headers = ["2nd_last_day","previous_close"]
-    final_dataframe = pd.concat(d, axis=1, keys=headers)
-    final_dataframe["%change in last 2 days"]=(final_dataframe["previous_close"]-final_dataframe["2nd_last_day"])/final_dataframe["2nd_last_day"]*100
-    final_dataframe= final_dataframe.sort_values('%change in last 2 days',ascending=False)
-    final_dataframe= final_dataframe.head(20)
-    return final_dataframe
+    
+    return data
 
 
 
